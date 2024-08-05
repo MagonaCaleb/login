@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dot.css">
+</head>
+
+<body id="loginbd">
+
+    <form id="form">
+        <h1>Login here</h1>
+
+        <div class="signup">
+
+
+            <br>
+            <label for="username">username:</label>
+            <input type="text" name="" id="username" placeholder="username" required>
+            <br>
+            <label for="password">password:</label>
+            <input type="password" name="" id="password" placeholder="password" required>
+            <button onclick="login()">Login</button>
+            <br>
+            <br>
+            <p>Don't have an account?</p>
+            <a href="index.html">Sign up</a>
+        </div>
+    </form>
+</body>
+<script>
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    let button = document.querySelector("button");
+    let form = document.querySelector("form");
+    let error = document.querySelector(".error");
+    let signup = document.querySelector(".signup");
+
+
+function login() {  
+    if (username.value == localStorage.getItem("username") && password.value == localStorage.getItem("password")) {
+        window.alert("login successful");
+    } else {
+        window.alert("Login details are incorrect. Please try again.");
+    }
+}
+
+
+
+</script>
+
+</html>
