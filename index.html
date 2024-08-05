@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dot.css">
+</head>
+<body>
+    <form action="">
+        <h1>Signup here</h1>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" placeholder="username" required>
+    <br>
+    <label for="password">password:</label>
+    <input type="password" name="password" id="password" placeholder="password" required>
+
+    <button onclick="login()">Signup</button>
+    <br>
+    <br>
+    <div>Already have an account? <a href="login.htm">Login</a></div>
+
+    </form> 
+    
+</body>
+<script>
+function login(){
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    
+     localStorage.setItem("user",username);
+     localStorage.setItem("pass",password);
+     alert("details submited successfully");
+     console.log(localStorage.getItem("username"));
+     console.log(localStorage.getItem("password"));
+    }
+
+
+
+
+
+
+
+
+
+</script>
+</html>
